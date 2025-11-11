@@ -181,17 +181,20 @@
         <script>
             function ajouterClasse() {
                 // À compléter : Ajouter les classes "rouge" et "grand-texte"
-                
+                const element = document.querySelector('#paragraphe4')
+                element.classList.add("rouge","grand-texte")
             }
             
             function enleverClasse() {
                 // À compléter : Enlever les classes "rouge" et "grand-texte"
-                
+                const element = document.querySelector('#paragraphe4')
+                element.classList.remove("rouge","grand-texte")
             }
             
             function basculerClasse() {
                 // À compléter : Utiliser classList.toggle() pour "bordure"
-                
+                const element = document.querySelector('#paragraphe4')
+                element.classList.toggle("bordure")
             }
         </script>
     </div>
