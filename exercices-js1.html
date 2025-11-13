@@ -301,14 +301,18 @@
         </div>
         
         <script>
+            const inputElement = document.querySelector("#nom")
+            const pElement = document.querySelector("#affichage7")
+            const colorElement = document.querySelector("#couleur")
             function afficherNom() {
                 // À compléter : Afficher "Bonjour [nom] !" dans le paragraphe
                 
+                pElement.innerText = `Bonjour ${inputElement.value} !`
             }
             
             function appliquerCouleur() {
                 // À compléter : Appliquer la couleur sélectionnée au paragraphe
-                
+                pElement.style.color = colorElement.value
             }
         </script>
     </div>
