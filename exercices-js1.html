@@ -436,13 +436,23 @@
         </div>
         
         <script>
+            const contenuOngletElements = document.querySelectorAll(".contenu-onglet")
+            const ongletElements = document.querySelectorAll(".onglet")
+            const contenuOngletVisibleElement = document.querySelectorAll(".visible")
             function afficherOnglet(numero) {
                 // À compléter : 
                 // 1. Cacher tous les contenus
                 // 2. Afficher le contenu sélectionné
                 // 3. Enlever la classe "actif" de tous les boutons
                 // 4. Ajouter la classe "actif" au bouton cliqué
-                
+                for(let i=0; i<contenuOngletElements.length; i++){
+                    contenuOngletElements[i].classList.remove("visible")
+                    contenuOngletElements[i].classList.add("cache")
+                    ongletElements[i].classList.remove("actif")
+                }
+                contenuOngletElements[numero-1].classList.add("visible")
+                contenuOngletElements[numero-1].classList.remove("cache")
+                ongletElements[numero-1].classList.add("actif")
             }
         </script>
     </div>
