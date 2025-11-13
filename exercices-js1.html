@@ -333,20 +333,23 @@
         </div>
         
         <script>
+            const tacheEmelent = document.querySelector("#tache")
+            const listeTachesElement = document.querySelector("#listeTaches")
             function ajouterTache() {
                 // À compléter : Ajouter une nouvelle tâche à la liste
                 // Format : <li>Tâche <button onclick="supprimerTache(this)">X</button></li>
-                
+                listeTachesElement.innerHTML += `<li>Tâche : ${tacheEmelent.value} <button onclick="supprimerTache(this)">X</button></li>`
             }
             
             function supprimerTache(bouton) {
                 // À compléter : Supprimer l'élément parent du bouton (le <li>)
                 
+                bouton.parentNode.remove()
             }
             
             function effacerTout() {
                 // À compléter : Vider toute la liste
-                
+                listeTachesElement.innerHTML = ""
             }
         </script>
     </div>
