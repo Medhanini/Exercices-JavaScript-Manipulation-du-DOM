@@ -371,24 +371,39 @@
         </div>
         
         <script>
+            let compteur = 0;
+            const compteurElement = document.querySelector("#compteur")
             function incrementer() {
                 // À compléter : Augmenter le compteur et ajuster la couleur
+                compteur = compteur + 1
+                compteurElement.innerHTML = compteur
+                ajusterCouleur(compteur)
                 
             }
             
             function decrementer() {
                 // À compléter : Diminuer le compteur et ajuster la couleur
-                
+                compteur = compteur - 1
+                compteurElement.innerHTML = compteur
+                 ajusterCouleur(compteur)
             }
             
             function reinitialiser() {
                 // À compléter : Remettre à 0 et couleur noire
-                
+                compteur = 0
+                compteurElement.innerHTML = compteur
+                ajusterCouleur(compteur)
             }
             
             function ajusterCouleur(valeur) {
                 // À compléter : Fonction helper pour ajuster la couleur
-                
+                if(valeur > 0){
+                    compteurElement.style.color = "green"
+                }else if(valeur < 0){
+                    compteurElement.style.color = "red"
+                }else{
+                    compteurElement.style.color = "black"
+                }
             }
         </script>
     </div>
